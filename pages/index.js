@@ -9,9 +9,7 @@ import Banner from "@/components/Banner";
 export default function HomePage({featuredProduct,newProducts}) {
   return (
     <div>
-      <Banner/>
       <Header />
-      <Hero />
       <Featured product={featuredProduct} />
       <NewProducts products={newProducts} />
     </div>
