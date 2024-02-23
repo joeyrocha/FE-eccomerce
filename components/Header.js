@@ -82,7 +82,7 @@ export default function Header() {
     <StyledHeader>
       <Center>
         <Wrapper>
-          <Logo href={'/'}><img className="hero-image" src="/mosszilla.png" /></Logo>
+          <Logo href={'/'}>MOSSZILLA</Logo>
           <StyledNav mobileNavActive={mobileNavActive}>
             <NavLink href={'/'}>Home</NavLink>
             <NavLink href={'/products'}>All products</NavLink>
