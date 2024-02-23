@@ -1,7 +1,7 @@
 import {mongooseConnect} from "@/lib/mongoose";
 import {Product} from "@/models/Product";
 import {Order} from "@/models/Order";
-const stripe = require('stripe')(process.env.STRIPE_SK);
+
 
 export default async function handler(req,res) {
   if (req.method !== 'POST') {
@@ -38,6 +38,7 @@ export default async function handler(req,res) {
     line_items,name,email,city,postalCode,
     streetAddress,country,paid:false,
   });
+{/* 
 
   const session = await stripe.checkout.sessions.create({
     line_items,
@@ -47,6 +48,10 @@ export default async function handler(req,res) {
     cancel_url: process.env.PUBLIC_URL + '/cart?canceled=1',
     metadata: {orderId:orderDoc._id.toString(),test:'ok'},
   });
+*/
+
+}
+
 
   res.json({
     url:session.url,
